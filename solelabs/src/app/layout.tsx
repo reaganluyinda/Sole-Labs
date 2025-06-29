@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="mx-32 my-4">
+      <body className="">
         <Navigation />
         {children}
         <Footer />

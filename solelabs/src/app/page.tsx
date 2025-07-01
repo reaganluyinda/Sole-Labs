@@ -1,15 +1,24 @@
 "use client";
+import {
+  AppWindow,
+  FileImage,
+  PhoneCall,
+  ShoppingCart,
+  TabletSmartphone,
+} from "lucide-react";
 import Image from "next/image";
 import { title } from "process";
 import { useState } from "react";
+import Link from "next/link";
+
 function Home() {
-  const [selectedService, setSelectedService] = useState<number | null>(null);
+  const [selectedService, setSelectedService] = useState<number | null>(1);
 
   const services = [
-    { id: 1, title: "Web-Designing" },
-    { id: 2, title: "Graphic Design" },
-    { id: 3, title: "Mobile Apps" },
-    { id: 4, title: "E-Commerce" },
+    { id: 1, title: "Web-Designing", icon: AppWindow },
+    { id: 2, title: "Graphic Design", icon: FileImage },
+    { id: 3, title: "Mobile Apps", icon: TabletSmartphone },
+    { id: 4, title: "E-Commerce", icon: ShoppingCart },
   ];
 
   const serviceDetails: Record<
@@ -74,17 +83,15 @@ function Home() {
       <div className="mx-4 md:mx-12 lg:mx-32">
         <div id="Hero-section" className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
-            <h1 className="text-amber-400 text-5xl mb-2 ">
-              Digital Agency with Excellence Service
+            <h1 className="text-[#33B3A9] text-5xl mb-4 ">
+              Empowering Brands Through Digital Excellence
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              quaerat corporis aut ullam maxime, cumque temporibus sequi nihil
-              dolorum voluptas dolores voluptate aliquid, incidunt nostrum
-              libero! Dolores atque ab quo! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Fugit quaerat corporis aut ullam
-              maxime, cumque temporibus sequi nihil dolorum voluptas dolores
-              voluptate aliquid, incidunt nostrum libero! Dolores atque ab quo!
+              At Sole Labs, we specialize in crafting digital solutions that
+              elevate your brand. Whether you need a stunning website, an
+              intuitive mobile app, or standout graphics, our team brings
+              innovation and precision to every project. Let's build your online
+              presence together.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -93,13 +100,13 @@ function Home() {
               alt="Hero image"
               height={800}
               width={700}
-              className="rounded-md"
+              className="rounded-md h-[400px]"
             />
           </div>
         </div>
         {/* About Us Section */}
         <div id="About Section" className="mt-32">
-          <h1 className="text-3xl md:text-4xl text-center font-semibold">
+          <h1 className="text-4xl text-[#01796f]  text-center font-semibold">
             About Us
           </h1>
           <div className="flex flex-col md:flex-row mt-12 gap-8">
@@ -107,9 +114,9 @@ function Home() {
               <Image
                 src="/About.jpg"
                 alt="About us image"
-                height={754}
-                width={573}
-                className="rounded-md"
+                height={654}
+                width={500}
+                className="rounded-md h-[650px]"
               />
             </div>
             <div className="space-y-4 md:w-1/2">
@@ -118,54 +125,63 @@ function Home() {
                 <br /> The Internet is Our Home!
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate culpa magni quo quod dolorum minus iste a, eligendi
-                praesentium, velit atque omnis sit aliquam unde iure. Quo, amet
-                perferendis! Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Sunt voluptate culpa magni quo quod dolorum minus iste a,
-                eligendi praesentium, velit atque omnis sit aliquam unde iure.
-                Quo, amet perferendis!
+                Sole Labs is a full-service digital agency passionate about
+                technology, design, and impact. We help businesses grow through
+                tailored digital experiences. Our team of creative professionals
+                combines strategy, design, and development to deliver results
+                that matter.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate culpa magni quo quod dolorum minus iste a, eligendi
-                praesentium, velit atque omnis sit aliquam unde iure. Quo, amet
-                perferendis! Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Sunt voluptate culpa magni quo quod dolorum minus iste a,
-                eligendi praesentium, velit atque omnis sit aliquam unde iure.
-                Quo, amet perferendis!
+                From responsive websites and robust mobile applications to
+                graphic design and branding, we are your reliable partner in the
+                digital world. At Sole Labs, we don’t just deliver solutions —
+                we build relationships through trust, creativity, and results.
               </p>
             </div>
           </div>
         </div>
         {/* Service section */}
         <div className="mt-32">
-          <h1 className="text-center font-bold text-3xl">Services</h1>
+          <h1 className="text-center font-bold text-3xl text-[#01796f]">
+            Services
+          </h1>
           <h2 className="text-3xl md:text-5xl text-center mt-4">
             Working to build the Online <br />
             Value
           </h2>
           <div className="flex flex-wrap  gap-6 justify-center mt-12">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                onClick={() => setSelectedService(service.id)}
-                className={`w-full md:w-1/3 lg:w-1/5 text-center px-4 py-16 rounded-md cursor-pointer shadow-md transition duration-300 hover:shadow-lg ${
-                  selectedService === service.id ? "bg-amber-100" : ""
-                }`}
-              >
-                <h1>{service.title}</h1>
-              </div>
-            ))}
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <div
+                  key={service.id}
+                  onClick={() => setSelectedService(service.id)}
+                  className={`w-full md:w-1/3 lg:w-1/5 text-center px-4 py-16 rounded-md cursor-pointer shadow-md transition duration-300 hover:shadow-lg ${
+                    selectedService === service.id
+                      ? "bg-[#33B3A9] text-white"
+                      : ""
+                  }`}
+                >
+                  <Icon
+                    className={`mx-auto mb-4 w-8 h-8  ${
+                      selectedService === service.id
+                        ? " text-white"
+                        : "text-[#33B3A9]"
+                    } `}
+                  />
+                  <h1 className=" text-xl">{service.title}</h1>
+                </div>
+              );
+            })}
           </div>
           <div className="shadow-md rounded-md my-12 max-w-5xl mx-auto p-4">
             {selectedService && serviceDetails[selectedService] ? (
-              <div className="flex">
-                <div className="w-1/2">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="md:w-1/2">
                   <h1 className="text-lg text-cyan-600">
                     {serviceDetails[selectedService].header}
                   </h1>
-                  <h1 className="text-2xl font-bold mb-2">
+                  <h1 className="text-2xl font-bold mb-2 text-[#01796f]">
                     {services.find((s) => s.id === selectedService)?.title}
                   </h1>
                   <p className="text-gray-700">
@@ -188,7 +204,7 @@ function Home() {
                   alt="Service detail image"
                   width={600}
                   height={400}
-                  className="rounded-md mx-auto w-1/2"
+                  className="rounded-md mx-auto md:w-1/2"
                 />
               </div>
             ) : (
@@ -207,9 +223,11 @@ function Home() {
           <h1 className="text-base">READY TO DO THIS</h1>
           <h1 className="text-5xl font-semibold">Let's get to work!</h1>
         </div>
-        <button className="bg-amber-300 px-8 py-4 rounded-md ">
-          CONTACT US
-        </button>
+        <Link href="/contact">
+          <button className="bg-[#33B3A9] px-8 py-4 rounded-md hover:text-white hover:bg-[#01796f] font-medium cursor-pointer">
+            CONTACT US
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -44,10 +44,10 @@ function About() {
             demanding and internet savvy clients.
           </p>
           <p className="tracking-wide">
-            From startups to established enterprises, we've helped businesses of
-            all sizes navigate the digital landscape. What sets us apart is our
-            attention to detail, our personalized approach, and our relentless
-            focus on delivering value.
+            From startups to established enterprises, we&apos;ve helped
+            businesses of all sizes navigate the digital landscape. What sets us
+            apart is our attention to detail, our personalized approach, and our
+            relentless focus on delivering value.
           </p>
           <p className="tracking-wide">
             We blend creativity with technical expertise to build digital

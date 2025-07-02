@@ -20,7 +20,9 @@ function Contact() {
   return (
     // contact-us Section
     <div className=" mt-16 mb-28 mx-4 md:mx-12 lg:mx-32 my-4">
-      <h1 className="text-[#33B3A9] text-center text-3xl">Contact</h1>
+      <h1 className="text-[#33B3A9] text-center text-3xl font-semibold">
+        Contact
+      </h1>
       <div className="flex flex-wrap gap-12 my-24 justify-center">
         {contacts.map((contact, id) => {
           const Icon = contact.icon;

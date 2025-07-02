@@ -106,7 +106,7 @@ function Home() {
         </div>
         {/* About Us Section */}
         <div id="About Section" className="mt-32">
-          <h1 className="text-4xl text-[#01796f]  text-center font-semibold">
+          <h1 className="text-4xl text-[#01796f]  text-center font-semibold mb-24">
             About Us
           </h1>
           <div className="flex flex-col md:flex-row mt-12 gap-8">

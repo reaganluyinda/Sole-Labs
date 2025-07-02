@@ -1,5 +1,5 @@
 import { MailOpen, MapPinned, PhoneCall } from "lucide-react";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+
 function Contact() {
   const contacts = [
     {

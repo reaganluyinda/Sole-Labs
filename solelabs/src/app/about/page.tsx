@@ -22,8 +22,8 @@ function About() {
             Who We Are
           </h1>
           <p className="text-lg mb-2">
-            We’re a passionate digital agency driven by creativity, technology,
-            and a commitment to excellence.
+            We&apos;re a passionate digital agency driven by creativity,
+            technology, and a commitment to excellence.
           </p>
           <p>
             At Sole Labs, we help businesses and individuals bring their ideas

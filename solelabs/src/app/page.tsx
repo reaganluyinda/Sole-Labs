@@ -2,12 +2,10 @@
 import {
   AppWindow,
   FileImage,
-  PhoneCall,
   ShoppingCart,
   TabletSmartphone,
 } from "lucide-react";
 import Image from "next/image";
-import { title } from "process";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -90,8 +88,8 @@ function Home() {
               At Sole Labs, we specialize in crafting digital solutions that
               elevate your brand. Whether you need a stunning website, an
               intuitive mobile app, or standout graphics, our team brings
-              innovation and precision to every project. Let's build your online
-              presence together.
+              innovation and precision to every project. Let&apos;s build your
+              online presence together.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -221,7 +219,7 @@ function Home() {
       <div className="flex flex-col md:flex-row gap-6 bg-blue-200 justify-around py-16 items-center max-sm:text-center">
         <div className="gap-4 ">
           <h1 className="text-base">READY TO DO THIS</h1>
-          <h1 className="text-5xl font-semibold">Let's get to work!</h1>
+          <h1 className="text-5xl font-semibold">Let&apos;s get to work!</h1>
         </div>
         <Link href="/contact">
           <button className="bg-[#33B3A9] px-8 py-4 rounded-md hover:text-white hover:bg-[#01796f] font-medium cursor-pointer">

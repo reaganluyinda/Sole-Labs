@@ -20,7 +20,7 @@ function Navigation() {
     { href: "/contact", label: "Contact" },
   ];
   return (
-    <nav className=" mx-4 md:mx-12 lg:mx-32 my-4 relative z-50">
+    <nav className=" mx-4 md:mx-12 lg:mx-32 my-4 relative z-50 ">
       <div
         className="flex justify-between items-center
       "

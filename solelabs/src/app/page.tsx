@@ -27,7 +27,7 @@ function Home() {
       header: "We create Designs & Technology",
       description:
         "We design responsive and modern websites tailored to your brand.",
-      image: "/web design.jpg",
+      image: "/web-design.jpg",
     },
     2: {
       header: "Lets Make Something Beautiful",

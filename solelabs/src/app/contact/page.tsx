@@ -11,7 +11,7 @@ function Contact() {
     {
       id: "2",
       title: "Location Here",
-      info: "Lastutie 4 A, Vantaa 01650",
+      info: "Lummetie 5, Vantaa ",
       icon: MapPinned,
     },
     { id: "3", title: "Call Here", info: "+358 449314367", icon: PhoneCall },
@@ -29,7 +29,7 @@ function Contact() {
           return (
             <div
               key={id}
-              className=" w-full md:w-1/3 lg:w-1/4 text-center py-12 shadow-lg cursor-pointer"
+              className=" w-full md:w-1/3 lg:w-1/4 text-center py-12 shadow-lg cursor-pointer  transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
               <Icon className="mx-auto mb-4 w-8 h-8 text-[#33B3A9]" />
               <h1 className="font-semibold">{contact.title}</h1>

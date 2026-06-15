@@ -5,7 +5,7 @@ function Contact() {
     {
       id: "1",
       title: "Email Here",
-      info: "contact@solelabs.site",
+      info: "contact@solelabs.tech",
       icon: MailOpen,
     },
     {
@@ -14,7 +14,7 @@ function Contact() {
       info: "Lummetie 5, Vantaa ",
       icon: MapPinned,
     },
-    { id: "3", title: "Call Here", info: "+358 449314367", icon: PhoneCall },
+    { id: "3", title: "Call Here", info: "+358 417294330", icon: PhoneCall },
   ];
 
   return (
